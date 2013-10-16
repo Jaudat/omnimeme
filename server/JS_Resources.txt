@@ -1,0 +1,3 @@
+Cool Resources:
+Iron  Router:- http://www.paypertise.com/meteorjs/iron-router-tutorial
+Basic App:- DiscoverMeteor.com
