@@ -1,3 +1,17 @@
-Cool Resources:
-Iron  Router:- http://www.paypertise.com/meteorjs/iron-router-tutorial
-Basic App:- DiscoverMeteor.com
+LINKS: ------------------------------------------------------------------------------------------------------------------------
+
+Meteor Docs:- 	http://docs.meteor.com/
+
+Iron  Router:- 	http://www.paypertise.com/meteorjs/iron-router-tutorial
+
+User Accounts Customization:
+				http://blog.benmcmahen.com/post/41741539120/building-a-customized-accounts-ui-for-meteor
+				https://www.eventedmind.com/feed/97d0164c-8f71-46fe-819b-df8df3704546
+
+
+EXAMPLE APPS: -----------------------------------------------------------------------------------------------------------------
+
+Fiddleware Subtitles: https://github.com/bmcmahen/Subtitles
+
+Telescope: 	https://github.com/SachaG/Telescope
+			DiscoverMeteor.com

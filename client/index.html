@@ -1,6 +1,25 @@
 <!-- toplevel html -->
-<template name="layout"> 
+<template name="main_layout"> 
 
+	<!-- render to the sidebar yield -->
+	<div class="layout_menu_area">
+		{{yield 'layout_menu'}}
+	</div>
+
+	<!-- the main template will be rendered here -->
+	<div class="layout_content_area">
+		{{yield}}
+	</div>
+
+	<!-- render to the footer yield -->
+	<div class="layout_footer_area">
+		{{yield 'layout_footer'}}
+	</div>
+</template>
+
+
+
+<template name="static_layout"> 
 	<!-- render to the sidebar yield -->
 	<div class="layout_menu_area">
 		{{yield 'layout_menu'}}

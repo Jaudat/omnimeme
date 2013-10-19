@@ -1,6 +1,6 @@
-<template name="menu">
+<template name="menubkup">
 	<nav class="navbar-wrapper navbar-inverse" role="navigation">   <!-- navbar-fixed-top -->
-		 <div class="container"> 
+		 <!-- <div class="container">  -->
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -27,22 +27,42 @@
 					<li class="active"><a href="#"><span class="glyphicon glyphicon-cloud"></span> Web</a></li>
 					<li><a href="#"><i class="icon-facebook"></i> Facebook</a></li>
 					<li><a href="#"><i class="icon-twitter"></i> Twitter</a></li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-dashboard"></span> DashBoard<b class="caret"></b></a>
-						<ul class="dropdown-menu">
-<!-- 							<li><a href="#">Bloggers & Journalists</a></li>
-		  					<li><a href="#">Company Details</a></li>
-		  					<li><a href="#">Contact Us</a></li> -->
-		  					<li><a href="#"><span class="glyphicon glyphicon-bell"></span> Notifications</a></li>
-		  					<li><a href="#"><span class="glyphicon glyphicon-eye-open"></span> Subscriptions</a></li> <!-- Can subscribe to categories or authors/websites -->
-		  					<li><a href="#"><span class="glyphicon glyphicon-cog"></span> Settings</a></li> <!-- Manage Account Settings -->
-						</ul>
-					</li>
+					{{#if currentUser}}
+						{{> navbar_loggedOut}}
+					{{else}}
+						{{> navbar_loggedIn}}
+					{{/if}}
 				</ul>
-				<ul class="nav navbar-nav pull-right">
+<!-- 				<ul class="nav navbar-nav pull-right">
 					<li class="nav navbar-nav pull-right">{{loginButtons}}</li>
-				</ul>
+				</ul> -->
 			</div><!-- /.navbar-collapse -->
-		</div>
+		<!-- </div> -->
 	</nav>
+</template>
+
+<template name="navbar_loggedInbkup">
+	{{#if loggingIn}}
+		<li><a>Logging In...</a></li>
+	{{else}}
+		<li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+			<span class="glyphicon glyphicon-user"></span>{{currentUser.profile.login}}<<b class="caret"></b></a>
+			<ul class="dropdown-menu">
+		}
+			<!-- 	<li><a href="#">Bloggers & Journalists</a></li>
+					<li><a href="#">Company Details</a></li>
+					<li><a href="#">Contact Us</a></li> -->
+					<li><a href="#"><span class="glyphicon glyphicon-bell"></span> Notifications</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-eye-open"></span> Subscriptions</a></li> <!-- Can subscribe to categories or authors/websites -->
+					<li><a href="#"><span class="glyphicon glyphicon-cog"></span> Settings</a></li> <!-- Manage Account Settings -->
+					<li class="divider"></li>
+					<li><a id="logout">Logout</a></li>
+			</ul>
+		</li>
+	{{/if}}
+</template>
+
+<template name="navbar_loggedOutbkup">
+	<li><a id="login"><span class="glyphicon glyphicon-user"></span>Signin</a></li>
 </template>

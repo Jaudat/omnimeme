@@ -4,13 +4,11 @@
 //https://github.com/EventedMind/iron-router
 
 Router.configure({
-  layout: 'layout',
+  //layout: 'main_layout',
 
   notFoundTemplate: 'notFound',
 
   loadingTemplate: 'loading',
-
-  layoutTemplate : 'layout',
 
   yieldTemplates: { 
     /* render the templated named footer to the 'footer' yield */
@@ -22,8 +20,30 @@ Router.configure({
 });
 
 Router.map(function() {
-  this.route('home', {
+  
+  this.route('webfeed', {
+  	layoutTemplate : 'main_layout',
   	path: '/' });
-  this.route('second')
+  
+  this.route('about', {
+  	layoutTemplate : 'static_layout',
+  	path : '/about'
+  });
+  
+  this.route('contact', {
+  	layoutTemplate : 'static_layout',
+  	path : '/contact'
+  });
+
+  this.route('publish', {
+  	layoutTemplate : 'static_layout',
+  	path : '/publish'
+  });
+
+  this.route('privacy', {
+  	layoutTemplate : 'static_layout',
+  	path : '/privacy'
+  });
+
 });
 
